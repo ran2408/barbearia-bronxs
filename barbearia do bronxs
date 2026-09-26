@@ -1,0 +1,508 @@
+\<!DOCTYPE html>
+\<html lang="pt-BR">
+\<head>
+\<meta charset="UTF-8">
+\<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+\<title>Barbearia Bronx's | Barbearia em Jundiaí\</title>
+\<meta name="description" content="Barbearia Bronx's em Jundiaí. Confira nossos serviços, preços, avaliações, localização e agende seu horário pelo WhatsApp.">
+\<meta property="og:title" content="Barbearia Bronx's | Barbearia em Jundiaí">
+\<meta property="og:description" content="Estilo, precisão e personalidade. Agende seu horário pelo WhatsApp.">
+\<meta property="og:type" content="website">
+\<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+\<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+\<link href="[https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700\&family=Inter:wght@400;500;600\&display=swap)" rel="stylesheet">
+\<style>
+:root{
+&#x20; \--black:#0a0a0a; --bg:#0f0f0f; --panel:#161616; --panel2:#1c1c1c;
+&#x20; \--line:#2b2b2b; --white:#f4f3f1; --grey:#9a968f;
+&#x20; \--bronze:#b98d4f; --bronze-lt:#d4ac74;
+&#x20; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); box-sizing:border-box;
+}
+\*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth; scroll-padding-top:76px;}
+body{background:var(--bg); color:var(--white); font-family:'Inter',sans-serif; overflow-x:hidden;}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-0.01em;}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+.wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+@media (prefers-reduced-motion: reduce){\*{animation:none !important; transition:none !important;}}
+
+/\* reveal on scroll \*/
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+/\* NAV \*/
+header{position:fixed; top:0; left:0; right:0; z-index:100; padding-top:env(safe-area-inset-top,0px); transition:background .3s, border-color .3s;}
+header.scrolled{background:rgba(10,10,10,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+nav{display:flex; align-items:center; justify-content:space-between; padding:18px 24px; max-width:1120px; margin:0 auto;}
+.logo{font-size:22px; letter-spacing:0.04em;}
+.logo b{color:var(--bronze);}
+.nav-links{display:flex; align-items:center; gap:26px; font-size:14px;}
+.nav-links a:not(.nav-cta){opacity:0.8; transition:opacity .2s;}
+.nav-links a:not(.nav-cta):hover{opacity:1; color:var(--bronze-lt);}
+.nav-cta{background:var(--bronze); color:#161005; padding:10px 20px; border-radius:2px; font-weight:600; transition:background .2s, transform .15s;}
+.nav-cta:hover{background:var(--bronze-lt);}
+.burger{display:none; background:none; border:none; color:var(--white); font-size:24px; cursor:pointer;}
+@media (max-width:840px){
+&#x20; .nav-links{position:fixed; top:0; right:-100%; height:100vh; height:100dvh; width:78%; max-width:320px;
+&#x20;   background:var(--panel); flex-direction:column; align-items:flex-start; justify-content:center; gap:24px;
+&#x20;   padding:32px; transition:right .35s ease; border-left:1px solid var(--line);}
+&#x20; .nav-links.open{right:0;}
+&#x20; .burger{display:block;}
+}
+
+/\* HERO \*/
+.hero{
+&#x20; min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+&#x20; text-align:center; padding:120px 24px 60px; position:relative;
+&#x20; background:
+&#x20;   radial-gradient(ellipse at 50% 0%, rgba(185,141,79,0.16), transparent 55%),
+&#x20;   repeating-linear-gradient(115deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 34px),
+&#x20;   linear-gradient(180deg, #0c0c0c, #0a0a0a 60%);
+}
+.hero-badge{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:30px;
+&#x20; padding:7px 16px; font-size:13px; color:var(--grey); margin-bottom:28px;}
+.hero-badge b{color:var(--bronze-lt);}
+.hero h1{font-size:clamp(44px,9vw,88px); line-height:0.98;}
+.hero h1 span{display:block; color:var(--bronze);}
+.hero .sub{font-size:clamp(17px,2.4vw,20px); color:var(--white); margin:20px 0 6px; font-weight:500;}
+.hero .sub2{color:var(--grey); font-size:15px; max-width:420px; margin:0 auto 34px;}
+.hero-actions{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:15px 28px; border-radius:2px; font-weight:600;
+&#x20; font-size:15px; cursor:pointer; border:1px solid transparent; transition:transform .15s, background .2s, border-color .2s;}
+.btn:active{transform:scale(0.97);}
+.btn-bronze{background:var(--bronze); color:#161005;}
+.btn-bronze:hover{background:var(--bronze-lt);}
+.btn-outline{border-color:var(--line); color:var(--white);}
+.btn-outline:hover{border-color:var(--bronze);}
+
+section{padding:96px 24px;}
+.eyebrow{color:var(--bronze); font-size:13px; letter-spacing:0.12em; margin-bottom:8px;}
+.section-title{font-size:clamp(32px,5vw,48px); margin-bottom:14px;}
+.section-desc{color:var(--grey); max-width:460px; font-size:15px; line-height:1.6;}
+
+/\* STATS in hero \*/
+.stats-row{display:flex; gap:40px; justify-content:center; margin-top:44px; flex-wrap:wrap;}
+.stat{text-align:center;}
+.stat .n{font-family:'Space Grotesk'; font-size:34px; color:var(--bronze-lt); font-weight:700;}
+.stat .l{font-size:12px; color:var(--grey); letter-spacing:0.05em; margin-top:2px;}
+
+/\* ABOUT \*/
+.about{background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+.about-visual{aspect-ratio:4/5; border-radius:4px; border:1px solid var(--line); position:relative; overflow:hidden;
+&#x20; background:
+&#x20;   radial-gradient(circle at 30% 20%, rgba(185,141,79,0.18), transparent 55%),
+&#x20;   repeating-linear-gradient(0deg, transparent 0 39px, rgba(185,141,79,0.06) 39px 40px),
+&#x20;   repeating-linear-gradient(90deg, transparent 0 39px, rgba(185,141,79,0.06) 39px 40px),
+&#x20;   \#141414;
+&#x20; display:flex; align-items:center; justify-content:center;
+}
+.about-visual span{font-family:'Space Grotesk'; font-size:15px; color:var(--grey); text-align:center; padding:20px;}
+.about-text p{color:var(--grey); line-height:1.75; font-size:15px; margin-bottom:20px;}
+.about-stats{display:flex; gap:36px; margin-top:12px;}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr;} .about-visual{aspect-ratio:16/9;}}
+
+/\* SERVICES \*/
+.svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:44px;}
+.svc-card{background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:26px;
+&#x20; transition:border-color .25s, transform .25s;}
+.svc-card:hover{border-color:var(--bronze); transform:translateY(-4px);}
+.svc-card h3{font-size:19px; margin-bottom:8px;}
+.svc-card p{color:var(--grey); font-size:13.5px; line-height:1.55; margin-bottom:18px; min-height:40px;}
+.svc-card .price{font-family:'Space Grotesk'; color:var(--bronze-lt); font-size:22px; margin-bottom:16px;}
+.svc-card .btn{width:100%; justify-content:center; padding:11px; font-size:13.5px;}
+.svc-note{color:var(--grey); font-size:12.5px; margin-top:18px; font-style:italic;}
+@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:600px){.svc-grid{grid-template-columns:1fr;}}
+
+/\* GALLERY \*/
+.gallery{background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.g-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:44px;}
+.g-item{aspect-ratio:1; border-radius:4px; border:1px solid var(--line); overflow:hidden; position:relative;
+&#x20; background:linear-gradient(150deg,#1c1a16,#0e0d0b 70%); display:flex; align-items:flex-end; padding:12px;
+&#x20; transition:transform .35s;}
+.g-item:hover{transform:scale(1.04);}
+.g-item span{font-size:12px; color:var(--grey); position:relative; z-index:1;}
+.g-item::after{content:"✂"; position:absolute; top:10px; right:12px; color:rgba(185,141,79,0.35); font-size:20px;}
+@media (max-width:700px){.g-grid{grid-template-columns:repeat(2,1fr);}}
+
+/\* REVIEWS \*/
+.rev-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;}
+.rev-score{font-family:'Space Grotesk'; font-size:44px; color:var(--bronze-lt);}
+.rev-stars{color:var(--bronze); letter-spacing:2px;}
+.rev-count{color:var(--grey); font-size:14px;}
+.rev-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px;}
+.rev-card{background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:22px;}
+.rev-card .stars{color:var(--bronze); font-size:13px; margin-bottom:10px;}
+.rev-card p{font-size:14px; line-height:1.6; color:var(--white); margin-bottom:14px;}
+.rev-card .who{color:var(--grey); font-size:12.5px;}
+@media (max-width:820px){.rev-grid{grid-template-columns:1fr;}}
+
+/\* LOCATION \*/
+.loc{background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.loc-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; margin-top:36px;}
+.info-row{display:flex; gap:14px; padding:13px 0; border-bottom:1px dashed var(--line);}
+.info-row .ico{color:var(--bronze); width:22px; font-size:17px;}
+.info-row .label{color:var(--grey); font-size:11.5px; letter-spacing:0.06em;}
+.info-row .val{font-size:15px; margin-top:3px;}
+.map-box{min-height:260px; border:1px solid var(--line); border-radius:4px;
+&#x20; background:
+&#x20;   repeating-linear-gradient(0deg, transparent 0 39px, rgba(185,141,79,0.08) 39px 40px),
+&#x20;   repeating-linear-gradient(90deg, transparent 0 39px, rgba(185,141,79,0.08) 39px 40px),
+&#x20;   \#141414;
+&#x20; display:flex; align-items:center; justify-content:center; text-align:center; padding:28px;}
+.map-box a{color:var(--bronze-lt); font-weight:600; border-bottom:1px solid var(--bronze); padding-bottom:2px;}
+@media (max-width:820px){.loc-grid{grid-template-columns:1fr;}}
+
+/\* INSTAGRAM + HOURS \*/
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.ig-card, .hours-card{background:var(--panel2); border:1px solid var(--line); border-radius:4px; padding:32px;}
+.ig-card h3, .hours-card h3{font-size:20px; margin-bottom:14px;}
+.ig-card p{color:var(--grey); font-size:14px; margin-bottom:18px;}
+.hours-row{display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed var(--line); font-size:14px;}
+.hours-row span:last-child{color:var(--bronze-lt); font-size:13px;}
+@media (max-width:760px){.two-col{grid-template-columns:1fr;}}
+
+/\* BOOKING \*/
+.booking-box{background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:34px; max-width:640px; margin:40px auto 0;}
+.field{margin-bottom:16px;}
+.field label{display:block; font-size:13px; color:var(--grey); margin-bottom:6px;}
+.field input, .field select{width:100%; background:var(--bg); border:1px solid var(--line); color:var(--white);
+&#x20; padding:12px; border-radius:3px; font-size:15px; font-family:inherit;}
+.field input:focus, .field select:focus{outline:2px solid var(--bronze); outline-offset:1px; border-color:var(--bronze);}
+.field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+@media (max-width:520px){.field-row{grid-template-columns:1fr;}}
+.slots{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
+.slot{padding:8px 12px; border:1px solid var(--line); border-radius:3px; font-size:13px; cursor:pointer; background:var(--bg);}
+.slot.taken{opacity:0.3; text-decoration:line-through; cursor:not-allowed;}
+.slot.selected{background:var(--bronze); color:#161005; border-color:var(--bronze);}
+.note{font-size:12px; color:var(--grey); margin-top:6px;}
+.submit-btn{width:100%; margin-top:6px; justify-content:center; font-size:16px; padding:16px;}
+
+footer{background:#080808; border-top:1px solid var(--line); padding:52px 24px 26px;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px; margin-bottom:32px;}
+.foot-grid h4{font-size:12.5px; color:var(--bronze); letter-spacing:0.1em; margin-bottom:14px;}
+.foot-grid a, .foot-grid p{display:block; color:var(--grey); font-size:14px; margin-bottom:9px;}
+.foot-grid a:hover{color:var(--bronze-lt);}
+.foot-bottom{border-top:1px solid var(--line); padding-top:20px; text-align:center; color:var(--grey); font-size:12px;}
+@media (max-width:700px){.foot-grid{grid-template-columns:1fr;}}
+
+.fab{position:fixed; bottom:calc(22px + env(safe-area-inset-bottom,0px)); right:22px; z-index:90;
+&#x20; width:58px; height:58px; border-radius:50%; background:#25D366; color:#07130a; display:flex;
+&#x20; align-items:center; justify-content:center; font-size:27px; box-shadow:0 8px 20px rgba(0,0,0,0.5);
+&#x20; animation:fabIn .6s ease .4s both; transition:transform .2s;}
+.fab:hover{transform:scale(1.08);}
+@keyframes fabIn{from{opacity:0; transform:translateY(20px) scale(0.8);} to{opacity:1; transform:none;}}
+\</style>
+\</head>
+\<body>
+
+\<header id="siteHeader">
+&#x20; \<nav>
+&#x20;   \<div class="logo">BRONX\<b>'S\</b>\</div>
+&#x20;   \<div class="nav-links" id="navLinks">
+&#x20;     \<a href="#inicio">Início\</a>
+&#x20;     \<a href="#servicos">Serviços\</a>
+&#x20;     \<a href="#galeria">Galeria\</a>
+&#x20;     \<a href="#sobre">Sobre\</a>
+&#x20;     \<a href="#avaliacoes">Avaliações\</a>
+&#x20;     \<a href="#local">Localização\</a>
+&#x20;     \<a href="#agendamento" class="nav-cta">Agendar\</a>
+&#x20;   \</div>
+&#x20;   \<button class="burger" id="burgerBtn" aria-label="Abrir menu">☰\</button>
+&#x20; \</nav>
+\</header>
+
+\<section class="hero" id="inicio">
+&#x20; \<div class="hero-badge">★★★★★ \<b>4,8\</b> no Google · 52 avaliações\</div>
+&#x20; \<h1>BARBEARIA\<span>BRONX'S\</span>\</h1>
+&#x20; \<p class="sub">Seu estilo começa aqui.\</p>
+&#x20; \<p class="sub2">Precisão, estilo e personalidade em cada corte — no coração de Jundiaí.\</p>
+&#x20; \<div class="hero-actions">
+&#x20;   \<a href="#agendamento" class="btn btn-bronze">Agendar meu corte\</a>
+&#x20;   \<a id="heroWhats" href="#" target="\_blank" class="btn btn-outline">Fale conosco\</a>
+&#x20; \</div>
+&#x20; \<div class="stats-row">
+&#x20;   \<div class="stat">\<div class="n" data-count="4.8" data-decimal="1">0\</div>\<div class="l">AVALIAÇÃO GOOGLE\</div>\</div>
+&#x20;   \<div class="stat">\<div class="n" data-count="52">0\</div>\<div class="l">AVALIAÇÕES\</div>\</div>
+&#x20;   \<div class="stat">\<div class="n" style="font-size:22px;">JUNDIAÍ\</div>\<div class="l">LOCALIZAÇÃO\</div>\</div>
+&#x20; \</div>
+\</section>
+
+\<section class="about" id="sobre">
+&#x20; \<div class="wrap about-grid">
+&#x20;   \<div class="about-visual reveal">\<span>Foto do ambiente da Bronx's\<br>(substitua por uma imagem real)\</span>\</div>
+&#x20;   \<div class="about-text reveal">
+&#x20;     \<div class="eyebrow">SOBRE A BRONX'S\</div>
+&#x20;     \<h2 class="section-title">Mais que um corte.\<br>Uma experiência.\</h2>
+&#x20;     \<p>A Barbearia Bronx's fica no Mercadão da Ferroviários, no Centro de Jundiaí. Um espaço pensado para quem valoriza atenção aos detalhes e um atendimento próximo, do primeiro corte à barba finalizada na navalha.\</p>
+&#x20;     \<div class="about-stats">
+&#x20;       \<div class="stat">\<div class="n" style="font-size:28px;">4,8\</div>\<div class="l">Avaliação Google\</div>\</div>
+&#x20;       \<div class="stat">\<div class="n" style="font-size:28px;">52\</div>\<div class="l">Avaliações\</div>\</div>
+&#x20;       \<div class="stat">\<div class="n" style="font-size:22px;">Jundiaí\</div>\<div class="l">Localização\</div>\</div>
+&#x20;     \</div>
+&#x20;   \</div>
+&#x20; \</div>
+\</section>
+
+\<section id="servicos">
+&#x20; \<div class="wrap">
+&#x20;   \<div class="reveal">
+&#x20;     \<div class="eyebrow">SERVIÇOS\</div>
+&#x20;     \<h2 class="section-title">Nossos serviços\</h2>
+&#x20;     \<p class="section-desc">Preços ainda não confirmados pela barbearia — editáveis no início do código (array \<code>SERVICES\</code>).\</p>
+&#x20;   \</div>
+&#x20;   \<div class="svc-grid" id="svcGrid">\</div>
+&#x20;   \<div class="svc-note">\* Nomes e valores exibidos são placeholders — confirme com a Bronx's antes de publicar.\</div>
+&#x20; \</div>
+\</section>
+
+\<section class="gallery" id="galeria">
+&#x20; \<div class="wrap">
+&#x20;   \<div class="reveal">
+&#x20;     \<div class="eyebrow">GALERIA\</div>
+&#x20;     \<h2 class="section-title">Nosso trabalho\</h2>
+&#x20;     \<p class="section-desc">As fotos enviadas ficam hospedadas no Google e não podem ser carregadas diretamente aqui — substitua estes espaços pelos arquivos de imagem reais.\</p>
+&#x20;   \</div>
+&#x20;   \<div class="g-grid">
+&#x20;     \<div class="g-item reveal">\<span>Corte\</span>\</div>
+&#x20;     \<div class="g-item reveal">\<span>Barba\</span>\</div>
+&#x20;     \<div class="g-item reveal">\<span>Ambiente\</span>\</div>
+&#x20;     \<div class="g-item reveal">\<span>Degradê\</span>\</div>
+&#x20;   \</div>
+&#x20; \</div>
+\</section>
+
+\<section id="avaliacoes">
+&#x20; \<div class="wrap">
+&#x20;   \<div class="reveal rev-head">
+&#x20;     \<div class="rev-score">4,8\<span style="font-size:20px; color:var(--grey);">/5\</span>\</div>
+&#x20;     \<div>
+&#x20;       \<div class="rev-stars">★★★★★\</div>
+&#x20;       \<div class="rev-count">52 avaliações no Google\</div>
+&#x20;     \</div>
+&#x20;   \</div>
+&#x20;   \<div class="rev-grid">
+&#x20;     \<div class="rev-card reveal">\<div class="stars">★★★★★\</div>\<p>Educação e profissionalismo... Só vão, vc irá se surpreender.\</p>\<div class="who">— Glaucia Fernandez\</div>\</div>
+&#x20;     \<div class="rev-card reveal">\<div class="stars">★★★★★\</div>\<p>Ótima barbearia, umas das melhores que já fui!! Fui atendido pelo Júnior!! Corte perfeito\</p>\<div class="who">— Leonardo Augusto Rosa\</div>\</div>
+&#x20;     \<div class="rev-card reveal">\<div class="stars">★★★★★\</div>\<p>Barbeiros muito gente boa e atenciosos, sempre corto lá! Muito bom!\</p>\<div class="who">— Taiwan John Cena\</div>\</div>
+&#x20;   \</div>
+&#x20;   \<div style="text-align:center; margin-top:32px;">
+&#x20;     \<a href="[https://www.google.com/maps/search/?api=1&query=Barbearia+Bronx%27s+Jundia%C3%AD](https://www.google.com/maps/search/?api=1\&query=Barbearia+Bronx%27s+Jundia%C3%AD)" target="\_blank" class="btn btn-outline">Ver mais avaliações\</a>
+&#x20;   \</div>
+&#x20; \</div>
+\</section>
+
+\<section class="loc" id="local">
+&#x20; \<div class="wrap">
+&#x20;   \<div class="reveal">
+&#x20;     \<div class="eyebrow">LOCALIZAÇÃO\</div>
+&#x20;     \<h2 class="section-title">Onde estamos\</h2>
+&#x20;   \</div>
+&#x20;   \<div class="loc-grid">
+&#x20;     \<div class="reveal">
+&#x20;       \<div class="info-row">\<div class="ico">📍\</div>\<div>\<div class="label">ENDEREÇO\</div>\<div class="val">R. Dr. José Roberto Basile Bonito, 50 — Centro, Jundiaí - SP, 13201-007\</div>\</div>\</div>
+&#x20;       \<div class="info-row">\<div class="ico">🏬\</div>\<div>\<div class="label">PONTO DE REFERÊNCIA\</div>\<div class="val">Mercadão da Ferroviários\</div>\</div>\</div>
+&#x20;       \<div class="info-row">\<div class="ico">📞\</div>\<div>\<div class="label">WHATSAPP\</div>\<div class="val">(11) 93027-8918\</div>\</div>\</div>
+&#x20;       \<div class="info-row">\<div class="ico">🕒\</div>\<div>\<div class="label">HORÁRIO\</div>\<div class="val">A confirmar — veja seção de horário abaixo\</div>\</div>\</div>
+&#x20;       \<a href="[https://www.google.com/maps/dir/?api=1&destination=R.+Dr.+Jos%C3%A9+Roberto+Basile+Bonito,+50+-+Centro,+Jundia%C3%AD+-+SP,+13201-007](https://www.google.com/maps/dir/?api=1\&destination=R.+Dr.+Jos%C3%A9+Roberto+Basile+Bonito,+50+-+Centro,+Jundia%C3%AD+-+SP,+13201-007)" target="\_blank" class="btn btn-bronze" style="margin-top:20px;">Como chegar\</a>
+&#x20;     \</div>
+&#x20;     \<div class="map-box reveal">
+&#x20;       \<div>\<p style="color:var(--grey); font-size:13px; margin-bottom:10px;">Mapa incorporado requer API própria\</p>
+&#x20;       \<a href="[https://www.google.com/maps/search/?api=1&query=R.+Dr.+Jos%C3%A9+Roberto+Basile+Bonito,+50+Jundia%C3%AD](https://www.google.com/maps/search/?api=1\&query=R.+Dr.+Jos%C3%A9+Roberto+Basile+Bonito,+50+Jundia%C3%AD)" target="\_blank">Abrir no Google Maps →\</a>\</div>
+&#x20;     \</div>
+&#x20;   \</div>
+&#x20; \</div>
+\</section>
+
+\<section>
+&#x20; \<div class="wrap two-col">
+&#x20;   \<div class="ig-card reveal">
+&#x20;     \<h3>Siga a Bronx's\</h3>
+&#x20;     \<p>@barbeariabronxs\</p>
+&#x20;     \<a href="[https://www.instagram.com/barbeariabronxs/](https://www.instagram.com/barbeariabronxs/)" target="\_blank" class="btn btn-outline">Ver Instagram\</a>
+&#x20;   \</div>
+&#x20;   \<div class="hours-card reveal">
+&#x20;     \<h3>Horário de funcionamento\</h3>
+&#x20;     \<div class="hours-row">\<span>Segunda\</span>\<span>A confirmar\</span>\</div>
+&#x20;     \<div class="hours-row">\<span>Terça\</span>\<span>A confirmar\</span>\</div>
+&#x20;     \<div class="hours-row">\<span>Quarta\</span>\<span>A confirmar\</span>\</div>
+&#x20;     \<div class="hours-row">\<span>Quinta\</span>\<span>A confirmar\</span>\</div>
+&#x20;     \<div class="hours-row">\<span>Sexta\</span>\<span>A confirmar\</span>\</div>
+&#x20;     \<div class="hours-row">\<span>Sábado\</span>\<span>A confirmar\</span>\</div>
+&#x20;     \<div class="hours-row" style="border-bottom:none;">\<span>Domingo\</span>\<span>A confirmar\</span>\</div>
+&#x20;   \</div>
+&#x20; \</div>
+\</section>
+
+\<section id="agendamento">
+&#x20; \<div class="wrap" style="text-align:center;">
+&#x20;   \<div class="reveal" style="text-align:center;">
+&#x20;     \<div class="eyebrow">AGENDAMENTO\</div>
+&#x20;     \<h2 class="section-title">Agende seu horário\</h2>
+&#x20;     \<p class="section-desc" style="margin:0 auto;">Preencha os dados — enviamos direto pro WhatsApp da Bronx's para confirmação.\</p>
+&#x20;   \</div>
+&#x20;   \<div class="booking-box reveal" style="text-align:left;">
+&#x20;     \<div class="field-row">
+&#x20;       \<div class="field">\<label for="fName">Nome\</label>\<input type="text" id="fName" placeholder="Seu nome">\</div>
+&#x20;       \<div class="field">\<label for="fPhone">Telefone\</label>\<input type="tel" id="fPhone" placeholder="(11) 90000-0000">\</div>
+&#x20;     \</div>
+&#x20;     \<div class="field">\<label for="fService">Serviço\</label>\<select id="fService">\</select>\</div>
+&#x20;     \<div class="field">\<label for="fDate">Data\</label>\<input type="date" id="fDate">\</div>
+&#x20;     \<div class="field">
+&#x20;       \<label>Horário\</label>
+&#x20;       \<div class="slots" id="slotsBox">\</div>
+&#x20;       \<div class="note">Horário riscado já foi escolhido nesta sessão. A confirmação final acontece pelo WhatsApp.\</div>
+&#x20;     \</div>
+&#x20;     \<button class="btn btn-bronze submit-btn" id="submitBooking">Agendar pelo WhatsApp\</button>
+&#x20;   \</div>
+&#x20; \</div>
+\</section>
+
+\<footer>
+&#x20; \<div class="wrap">
+&#x20;   \<div class="foot-grid">
+&#x20;     \<div>
+&#x20;       \<h4>BARBEARIA BRONX'S\</h4>
+&#x20;       \<p>Estilo, precisão e personalidade.\</p>
+&#x20;       \<p>R. Dr. José Roberto Basile Bonito, 50 — Centro, Jundiaí - SP\</p>
+&#x20;     \</div>
+&#x20;     \<div>
+&#x20;       \<h4>CONTATO\</h4>
+&#x20;       \<a id="footWhats" href="#" target="\_blank">WhatsApp: (11) 93027-8918\</a>
+&#x20;       \<a href="[https://www.instagram.com/barbeariabronxs/](https://www.instagram.com/barbeariabronxs/)" target="\_blank">@barbeariabronxs\</a>
+&#x20;     \</div>
+&#x20;     \<div>
+&#x20;       \<h4>NAVEGAÇÃO\</h4>
+&#x20;       \<a href="#inicio">Início\</a>
+&#x20;       \<a href="#servicos">Serviços\</a>
+&#x20;       \<a href="#agendamento">Agendamento\</a>
+&#x20;       \<a href="#local">Localização\</a>
+&#x20;     \</div>
+&#x20;   \</div>
+&#x20;   \<div class="foot-bottom">© 2026 Barbearia Bronx's. Todos os direitos reservados.\</div>
+&#x20; \</div>
+\</footer>
+
+\<a class="fab" id="fabWhats" href="#" target="\_blank" aria-label="WhatsApp">💬\</a>
+
+\<script>
+// ====== CONFIGURÁVEL ======
+const WHATSAPP_NUMBER = "5511930278918"; // (11) 93027-8918
+const SERVICES = [
+&#x20; {name:"Corte", desc:"Corte masculino com acabamento profissional.", price:"R$ XX,XX"},
+&#x20; {name:"Barba", desc:"Toalha quente, navalha e finalização.", price:"R$ XX,XX"},
+&#x20; {name:"Corte + Barba", desc:"Combo completo.", price:"R$ XX,XX"},
+&#x20; {name:"Degradê", desc:"Fade com acabamento na navalha.", price:"R$ XX,XX"},
+&#x20; {name:"Sobrancelha", desc:"Design na navalha ou pinça.", price:"R$ XX,XX"},
+&#x20; {name:"Pigmentação", desc:"Barba ou cabelo.", price:"R$ XX,XX"}
+]; // <- confirme nomes e valores reais com a Bronx's
+const TIME_SLOTS = ["09:00","10:00","11:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00"];
+// ===========================
+
+function waLink(text){ return "[https://wa.me/](https://wa.me/)" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text); }
+document.getElementById('heroWhats').href = waLink("Olá! Encontrei a Barbearia Bronx's pelo site e gostaria de agendar um horário.");
+document.getElementById('footWhats').href = waLink("Olá! Encontrei a Barbearia Bronx's pelo site e gostaria de falar com vocês.");
+document.getElementById('fabWhats').href = waLink("Olá! Encontrei a Barbearia Bronx's pelo site.");
+
+// Services
+const svcGrid = document.getElementById('svcGrid');
+const fService = document.getElementById('fService');
+SERVICES.forEach(s=>{
+&#x20; const card = document.createElement('div');
+&#x20; card.className = 'svc-card reveal';
+&#x20; card.innerHTML = \`\<h3>${s.name}\</h3>\<p>${s.desc}\</p>\<div class="price">${s.price}\</div>
+&#x20;   \<a class="btn btn-outline" href="${waLink('Olá! Gostaria de agendar: '+s.name)}" target="\_blank">Agendar\</a>\`;
+&#x20; svcGrid.appendChild(card);
+&#x20; const opt = document.createElement('option');
+&#x20; opt.textContent = s.name + " — " + s.price;
+&#x20; fService.appendChild(opt);
+});
+
+// Date
+const fDate = document.getElementById('fDate');
+const todayStr = new Date().toISOString().slice(0,10);
+fDate.value = todayStr; fDate.min = todayStr;
+
+// Slots (session-only availability)
+const taken = {}; let selectedSlot = null;
+function renderSlots(){
+&#x20; const box = document.getElementById('slotsBox');
+&#x20; box.innerHTML = "";
+&#x20; const key = fDate.value;
+&#x20; const set = taken[key] || new Set();
+&#x20; selectedSlot = null;
+&#x20; TIME_SLOTS.forEach(t=>{
+&#x20;   const d = document.createElement('div');
+&#x20;   d.className = 'slot' + (set.has(t) ? ' taken' : '');
+&#x20;   d.textContent = t;
+&#x20;   if(!set.has(t)){
+&#x20;     d.addEventListener('click', ()=>{
+&#x20;       document.querySelectorAll('.slot').forEach(s=>s.classList.remove('selected'));
+&#x20;       d.classList.add('selected'); selectedSlot = t;
+&#x20;     });
+&#x20;   }
+&#x20;   box.appendChild(d);
+&#x20; });
+}
+fDate.addEventListener('change', renderSlots);
+renderSlots();
+
+document.getElementById('submitBooking').addEventListener('click', ()=>{
+&#x20; const name = document.getElementById('fName').value.trim();
+&#x20; const phone = document.getElementById('fPhone').value.trim();
+&#x20; const service = fService.value;
+&#x20; const date = fDate.value;
+&#x20; if(!name){ alert("Digite seu nome."); return; }
+&#x20; if(!selectedSlot){ alert("Escolha um horário disponível."); return; }
+&#x20; const key = date;
+&#x20; if(!taken[key]) taken[key] = new Set();
+&#x20; taken[key].add(selectedSlot);
+&#x20; renderSlots();
+&#x20; const msg = \`Olá, Barbearia Bronx's! Gostaria de agendar um horário.\n\nNome: ${name}\nTelefone: ${phone}\nServiço: ${service}\nData: ${date}\nHorário: ${selectedSlot}\`;
+&#x20; window\.open(waLink(msg), "\_blank");
+});
+
+// Navbar scroll state + mobile menu
+const header = document.getElementById('siteHeader');
+window\.addEventListener('scroll', ()=>{
+&#x20; header.classList.toggle('scrolled', window\.scrollY > 30);
+});
+const burgerBtn = document.getElementById('burgerBtn');
+const navLinks = document.getElementById('navLinks');
+burgerBtn.addEventListener('click', ()=> navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> navLinks.classList.remove('open')));
+
+// Reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+&#x20; entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+// Animated counters
+const counters = document.querySelectorAll('[data-count]');
+const cio = new IntersectionObserver((entries)=>{
+&#x20; entries.forEach(e=>{
+&#x20;   if(e.isIntersecting){
+&#x20;     const el = e.target;
+&#x20;     const target = parseFloat(el.dataset.count);
+&#x20;     const decimals = parseInt(el.dataset.decimal || "0");
+&#x20;     let cur = 0;
+&#x20;     const step = target / 40;
+&#x20;     const tick = ()=>{
+&#x20;       cur += step;
+&#x20;       if(cur >= target){ el.textContent = target.toFixed(decimals); return; }
+&#x20;       el.textContent = cur.toFixed(decimals);
+&#x20;       requestAnimationFrame(tick);
+&#x20;     };
+&#x20;     tick();
+&#x20;     cio.unobserve(el);
+&#x20;   }
+&#x20; });
+}, {threshold:0.5});
+counters.forEach(el=> cio.observe(el));
+\</script>
+
+\</body>
+\</html>                                                                                                                            
